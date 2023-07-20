@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class=" bg-dark">
+  <section>
+    <div class="container-fluid bg-info p-3 my-5  text-white main">
+      <div class="text-center my-5">
+        <h1 class="font-size-50px color4 webname">Bookmarker</h1>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-bookmark mx-2 fs-4 color3"></i>
+        <h2 class="title1 ">Bookmark your favorite sites</h2>
+        <i class="fa-solid fa-bookmark mx-2 fs-4 color4"></i>
+      </div>
+      <div class="container">
+        <div>
+          <i class="fa-solid fa-book-bookmark pe-2 my-2 "></i>
+          <label for="sitename" class="fw-bold">Site Name</label>
+        </div>
+        <div>
+          <input type="text" class="form-control mb-1" id="sitename" oninput="vailde(),try2() ,try4()">
+          <h6 class=" text-white font-size-14px " id="check1"> Note : The Site Name Must Contain at least 3 ( Characters Or Numbers )
+          </h6>
+          <h6 class=" text-white font-size-14px text-white" id="check3"> Note : The Site Name Must Not Match
+          </h6>
+        </div>
+        <div>
+          <i class="fa-solid fa-link pe-2 my-2"></i>
+          <label for="siteinput" class="fw-bold">Site URL</label>
+        </div>
+        <div>
+          <input type="text" class="form-control mb-1" id="siteinput" oninput="vailde(),try3()">
+          <h6 class=" text-white font-size-14px " id="check2"> Note : The Site Url Must Be Availd one ( Ex : www.google.com ) </h6>
+        </div>
+        <div class="text-center my-5">
+          <button class="btn btn-success px-4 disabled" onclick="addWeb()" id="submitbtn">Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tableshow">
+    <div class="container">
+      <table class="table table-dark  text-center">
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit The Site</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="t-body">
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.color2 {
+    background-color: #522b5b;
+}
+
+.color3 {
+    color: #854f6c;
+}
+
+.color4 {
+    color: #dfb6b2;
+}
+
+.color5 {
+    background-color: #2b124c;
+}
+
+.font-size-14px {
+    font-size: 14px;
+
+}
+
+.font-size-40px {
+    font-size: 40px;
+
+}
+
+.font-size-50px {
+    font-size: 50px;
+    font-family: Pacifico;
+}
+
+.font-size-72px {
+    font-size: 72px;
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url(../webfonts/Pacifico-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: Righteous;
+    src: url(../webfonts/Righteous-Regular.ttf);
+}
+
+
+.title1 {
+    background-image: linear-gradient(to right, #854f6c, #dfb6b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Righteous;
+}
+
+
+.main {
+    background-image: linear-gradient(rgba(77, 77, 77, 0.7), rgba(77, 77, 77, 0.7)), url(../img/overlay-bg.jpg);
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+}
