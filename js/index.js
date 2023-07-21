@@ -20,7 +20,7 @@ if(allsites.length==0){
     if (regex1.test(siteinput.value) === true &&regex.test(sitename.value) === true &&allsites[i].name.toLowerCase()!==sitename.value.toLowerCase()) {
       document.getElementById("submitbtn").classList.remove("disabled");
     } else if (
-      regex1.test(siteinput.value) === false || regex.test(sitename.value) === false||allsites[i].name.toLowerCase()!==sitename.value.toLowerCase( ) ){
+      regex1.test(siteinput.value) === false || regex.test(sitename.value) === false||allsites[i].name.toLowerCase()==sitename.value.toLowerCase( ) ){
       document.getElementById("submitbtn").classList.add("disabled");
     }
 } }}
