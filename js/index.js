@@ -17,10 +17,10 @@ if(allsites.length==0){
   }
 }else if(allsites.length>0){
   for(var i=0;i<allsites.length;i++){
-    if (regex1.test(siteinput.value) === true &&regex.test(sitename.value) === true &&allsites[i].name.toLowerCase().includes(sitename.value.toLowerCase())===false) {
+    if (regex1.test(siteinput.value) === true &&regex.test(sitename.value) === true &&allsites[i].name.toLowerCase()!==sitename.value.toLowerCase()) {
       document.getElementById("submitbtn").classList.remove("disabled");
     } else if (
-      regex1.test(siteinput.value) === false || regex.test(sitename.value) === false||allsites[i].name.toLowerCase().includes(sitename.value.toLowerCase())===true ) {
+      regex1.test(siteinput.value) === false || regex.test(sitename.value) === false||allsites[i].name.toLowerCase()!==sitename.value.toLowerCase( ) ){
       document.getElementById("submitbtn").classList.add("disabled");
     }
 } }}
@@ -155,12 +155,18 @@ if(sitename.value==""){
     document.getElementById("check3").classList.remove("text-success");
 }else{
   document.getElementById("check3").classList.add("text-white");
+
+          
+
   for(var i=0;i<allsites.length;i++){
-      if(allsites[i].name.toLowerCase().includes(sitename.value.toLowerCase())===false){ 
+
+    console.log(allsites[i].name,sitename.value.toLowerCase());
+      if(allsites[i].name.toLowerCase() !== sitename.value.toLowerCase()){ 
+        console.log("hello");
         document.getElementById("check3").classList.add("text-success");
         document.getElementById("check3").classList.remove("text-danger");
         document.getElementById("check3").classList.remove("text-white");
-      }else if (allsites[i].name.toLowerCase().includes(sitename.value.toLowerCase())===true){
+      }else if (allsites[i].name.toLowerCase() == sitename.value.toLowerCase()){
         document.getElementById("check3").classList.add("text-danger");
           document.getElementById("check3").classList.remove("text-success");
           document.getElementById("check3").classList.remove("text-white");
@@ -169,7 +175,5 @@ if(sitename.value==""){
     }
     }
   
-
-
 
 
